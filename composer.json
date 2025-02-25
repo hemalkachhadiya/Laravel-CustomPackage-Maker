@@ -1,0 +1,26 @@
+{
+    "name": "smarttech/prod",
+    "description": "this is not testing dmeo",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+           "Smarttech\\Prod\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jayesh",
+            "email": "Jay.smarttech@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smarttech\\Prod\\Providers\\ProdProviders"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
