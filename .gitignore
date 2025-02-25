@@ -45,5 +45,6 @@ auth.json
 /vite.config.js
 /database
 /phpunit.xml
-/composer.*
+/composer.lock
+/composer1.json
 /.gitattributes
