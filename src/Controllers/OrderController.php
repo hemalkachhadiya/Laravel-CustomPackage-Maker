@@ -230,7 +230,8 @@ class OrderController extends BaseController {
                 $order_number = 'ORD'.$today.$user->id.$rand;
 
                 $order = json_decode( $request->address );
-                $address = $order->address;
+                $address = $order->address[0];
+                // dd($address->address, );
 
                 $add_order['customer_id'] = $user->id;
                 $add_order['currency'] = $user->currency;
