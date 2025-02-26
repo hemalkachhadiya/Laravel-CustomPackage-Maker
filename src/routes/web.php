@@ -36,7 +36,8 @@ Route::prefix('v1')->namespace('API')->group(function () { //'localization' as m
     Route::post('/check_update_password',[AuthController::class,'check_update_password']);
 
     Route::post('/login_register',[AuthController::class,'login_register']);
-
+    Route::post('/logout',[AuthController::class,'postLogout']);
+    
     Route::post('/user_details',[AuthController::class,'user_details']);
     Route::post('/update_profile',[AuthController::class,'update_profile']);
     Route::post('/check_phone_number',[AuthController::class,'check_phone_number']);
