@@ -5,7 +5,7 @@ namespace Smarttech\Prod\Controllers;
 use Illuminate\Http\Request;
 use Smarttech\Prod\Controllers\BaseController as BaseController;
 use Smarttech\Prod\Controllers\CommonModal;
-use Illuminate\Support\Facades\DB;
+use DB;
 use Smarttech\Prod\Models\User;
 use Smarttech\Prod\Models\Tbl_order;
 use Smarttech\Prod\Models\Tbl_coupon;
