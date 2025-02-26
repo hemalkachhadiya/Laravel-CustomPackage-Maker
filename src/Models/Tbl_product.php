@@ -4,12 +4,13 @@ namespace Smarttech\Prod\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tbl_product extends Model{
+class Tbl_product extends Model
+{
     /**
-    * The attributes that are mass assignable.
-    *
-    * @var array
-    */
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'user_id',
         'hsn_code',
@@ -55,8 +56,6 @@ class Tbl_product extends Model{
         'cat',
         'test_id',
         'is_drug',
-        'pack_size_label'
+        'pack_size_label',
     ];
-
-
 }

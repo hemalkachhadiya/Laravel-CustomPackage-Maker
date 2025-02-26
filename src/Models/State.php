@@ -4,14 +4,16 @@ namespace Smarttech\Prod\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tbl_image extends Model
+class State extends Model
 {
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    // protected $table = 'tbl_order_status';
+
     protected $fillable = [
-        'image', 'user_id',
+        'name', 'country_id',
     ];
 }

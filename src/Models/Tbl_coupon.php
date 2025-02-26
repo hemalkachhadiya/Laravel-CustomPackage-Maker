@@ -4,7 +4,7 @@ namespace Smarttech\Prod\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tbl_image extends Model
+class Tbl_coupon extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,6 @@ class Tbl_image extends Model
      * @var array
      */
     protected $fillable = [
-        'image', 'user_id',
+        'user_id', 'code', 'discount_type', 'value', 'start_date', 'end_date', 'status', 'minimum_cart_amount', 'maximun_spend', 'limit_use_per_person',
     ];
 }

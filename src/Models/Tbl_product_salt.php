@@ -4,7 +4,7 @@ namespace Smarttech\Prod\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tbl_image extends Model
+class Tbl_product_salt extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,6 @@ class Tbl_image extends Model
      * @var array
      */
     protected $fillable = [
-        'image', 'user_id',
+        'id', 'product_id', 'salt_id', 'unit', 'value',
     ];
 }

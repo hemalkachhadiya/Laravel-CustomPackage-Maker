@@ -2,12 +2,15 @@
 
 namespace Smarttech\Prod;
 
-use Smarttech\Prod\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use Smarttech\Prod\Controllers\CategorieController;
+use Smarttech\Prod\Controllers\ProductController;
+
 // use Smarttech\Prod\Controllers\ProductController;
 //
-
-Route::get('product_list',[ProductController::class,'product_list']);
+// dd('cate');
+Route::get('product_list', [ProductController::class, 'product_list']);
+Route::post('/categorie_list', [CategorieController::class, 'categorie_list']);
 
 // Route::prefix('products')->group(function () {
 //     Route::get('/', [ProductController::class, 'index'])->name('products.index');
@@ -17,4 +20,3 @@ Route::get('product_list',[ProductController::class,'product_list']);
 //     Route::put('/{product}', [ProductController::class, 'update'])->name('products.update');
 //     Route::delete('/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 // });
-

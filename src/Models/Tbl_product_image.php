@@ -12,6 +12,6 @@ class Tbl_product_image extends Model
      * @var array
      */
     protected $fillable = [
-       'product_id', 'image_id','type'
+        'product_id', 'image_id', 'type',
     ];
 }

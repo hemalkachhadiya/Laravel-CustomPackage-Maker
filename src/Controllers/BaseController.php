@@ -2,7 +2,6 @@
 
 namespace Smarttech\Prod\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller as Controller;
 
 class BaseController extends Controller
@@ -14,27 +13,26 @@ class BaseController extends Controller
      */
     public function sendResponse($result, $message)
     {
-    	$response = [
-            'success' => "1",
-            'data'    => $result,
+        $response = [
+            'success' => '1',
+            'data' => $result,
             'message' => $message,
         ];
 
         return response()->json($response, 200);
     }
 
-    public function sendResponsePagination($result, $message,$offset)
+    public function sendResponsePagination($result, $message, $offset)
     {
         $response = [
-            'success' => "1",
-            'data'    => $result,
+            'success' => '1',
+            'data' => $result,
             'offset' => $offset,
             'message' => $message,
         ];
 
         return response()->json($response, 200);
     }
-
 
     /**
      * return error response.
@@ -43,16 +41,14 @@ class BaseController extends Controller
      */
     public function sendError($error, $errorMessages = [], $code = 404)
     {
-    	$response = [
-            'success' => "0",
+        $response = [
+            'success' => '0',
             'message' => $error,
         ];
 
-
-        if(!empty($errorMessages)){
+        if (! empty($errorMessages)) {
             $response['data'] = $errorMessages;
         }
-
 
         return response()->json($response, $code);
     }
@@ -65,15 +61,13 @@ class BaseController extends Controller
     public function tokenError($error, $errorMessages = [], $code = 404)
     {
         $response = [
-            'success' => "4",
+            'success' => '4',
             'message' => $error,
         ];
 
-
-        if(!empty($errorMessages)){
+        if (! empty($errorMessages)) {
             $response['data'] = $errorMessages;
         }
-
 
         return response()->json($response, $code);
     }

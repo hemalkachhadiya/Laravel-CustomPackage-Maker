@@ -1,10 +1,12 @@
 <?php
 
+// namespace App\Model;
+
 namespace Smarttech\Prod\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tbl_image extends Model
+class Tbl_categorie extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +14,6 @@ class Tbl_image extends Model
      * @var array
      */
     protected $fillable = [
-        'image', 'user_id',
+        'user_id', 'name', 'slug', 'searchable', 'image', 'status', 'seo', 'type', 'categories_id', 'level',
     ];
 }

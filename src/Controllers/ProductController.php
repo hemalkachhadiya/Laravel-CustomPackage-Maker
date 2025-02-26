@@ -1,18 +1,17 @@
 <?php
 
 namespace Smarttech\Prod\Controllers;
+
 // use DB;
 use Illuminate\Http\Request;
 // use Validator;
 // use Illuminate\Routing\Controller as BaseController;
-use Smarttech\Prod\Models\Tbl_product;
-use Smarttech\Prod\Models\Tbl_product_image;
-use Smarttech\Prod\Models\Tbl_image;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-
 use Smarttech\Prod\Controllers\BaseController as BaseController;
-
+use Smarttech\Prod\Models\Tbl_image;
+use Smarttech\Prod\Models\Tbl_product;
+use Smarttech\Prod\Models\Tbl_product_image;
 
 class ProductController extends BaseController
 {
@@ -146,14 +145,14 @@ class ProductController extends BaseController
                 //     'message' => 'List Loaded Successfully',
                 //     'offset' => $offset
                 // ], 200);
-                return $this->sendResponsePagination( $data, 'List load successfully.', $offset );
+                return $this->sendResponsePagination($data, 'List load successfully.', $offset);
             } else {
-                return $this->sendError( 'List not found', '' );
+                return $this->sendError('List not found', '');
             }
         }
+
         return view('furniProd', compact('data', 'offset'));
     }
-
 
     // this function is used to
     public static function pro_images($pro_id)
