@@ -15,15 +15,15 @@ Route::post('/categorie_list', [CategorieController::class, 'categorie_list']);
 
 
 
-Route::post('/place_order', [CategorieController::class,'place_order']);
-Route::post('/re_order',[CategorieController::class,'re_order']);
-Route::post('/check_coupon_code',[CategorieController::class,'check_coupon']);
-Route::post('/pending_order',[CategorieController::class,'pending_order']);
-Route::post('/complete_order',[CategorieController::class,'complete_order']);
-Route::post('/order_details', [CategorieController::class,'order_details']);
-Route::post('/cancle_order', [CategorieController::class,'cancle_order']);
-Route::post('/order_tracking', [CategorieController::class,'order_tracking']);
-Route::post('/place_order_with_prescription', [CategorieController::class,'place_order_with_prescription']);
+Route::post('/place_order', [OrderController::class,'place_order']);
+Route::post('/re_order',[OrderController::class,'re_order']);
+Route::post('/check_coupon_code',[OrderController::class,'check_coupon']);
+Route::post('/pending_order',[OrderController::class,'pending_order']);
+Route::post('/complete_order',[OrderController::class,'complete_order']);
+Route::post('/order_details', [OrderController::class,'order_details']);
+Route::post('/cancle_order', [OrderController::class,'cancle_order']);
+Route::post('/order_tracking', [OrderController::class,'order_tracking']);
+Route::post('/place_order_with_prescription', [OrderController::class,'place_order_with_prescription']);
 
 // Route::prefix('products')->group(function () {
 //     Route::get('/', [ProductController::class, 'index'])->name('products.index');
